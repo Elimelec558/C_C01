@@ -1,3 +1,5 @@
 #!/bin/bash
-read -a arg
-for val in "${arg[@]}"; do echo "$val"; done
+while [ $# -gt 0 ]; do
+  echo "$1"
+  shift
+done
