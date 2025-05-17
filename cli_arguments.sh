@@ -1,5 +1,4 @@
 #!/bin/bash
-while [ $# -gt 0 ]; do
-  echo "$1"
-  shift
+for arg in "$@"; do
+  echo "$arg"
 done
