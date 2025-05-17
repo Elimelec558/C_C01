@@ -1,7 +1,9 @@
 #!/bin/bash
-echo "Affichage des arguments :"
+# Script qui demande à l'utilisateur d'entrer des arguments et les affiche ligne par ligne.
+echo "Entrez plusieurs arguments séparés par des espaces :"
+read -a arg  
 compte=1
-for arg in "$@"; do
-  echo "Argument $compte : $arg"
-  compte=$((compte + 1))  # Incrémentation correcte en Bash
+for val in "${arg[@]}"; do
+  echo "Argument $compte : $val"
+  compte=$((compte + 1))  
 done
