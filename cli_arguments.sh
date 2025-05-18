@@ -1,6 +1,4 @@
 #!/bin/bash
-#Scrip acceptant un ou plusieurs arguments et les affichants ligne par ligne
-read -a arg
-for val in "${arg[@]}"; do
-echo "Argument: $val"
-done
+#Écrire un script qui accepte un ou plusieurs arguments et les affiche ligne par ligne.
+echo "$1"
+echo "$2"
