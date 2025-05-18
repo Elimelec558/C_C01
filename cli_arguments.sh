@@ -1,3 +1,6 @@
 #!/bin/bash
-echo "argument 1:$1"
-echo "argument 2:$2"
+#Script acceptant des arguments et les affichants
+while [ "$#" -ne 0 ]; do
+echo "Argument:$1"
+shift 
+done
