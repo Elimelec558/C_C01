@@ -1,6 +1,10 @@
 #!/bin/bash
-#Script acceptant des arguments et les affichants
+# Script acceptant des arguments et les affichant
+
+compte=1 
+
 while [ "$#" -ne 0 ]; do
-echo "Argument:$1"
-shift 
+    echo "Argument $compte: $1"
+    shift 
+    compte=$((compte + 1))  
 done
