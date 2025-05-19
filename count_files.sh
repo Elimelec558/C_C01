@@ -1,8 +1,10 @@
 #!/bin/bash
-#Scrip comptant le nombre de fichiers dans un repertoire.
+#Script comptant le nombre de fichier dans un repertoire.
 read repertoire
-if [ -d "$repertoire" ]; then
-echo "Le dossier $repertoire contient $(ls "$repertoire"|wc -l) fichiers."
-else
-echo "Erreur: Ce repertoire n'exist pas."
-fi
+compteur=0
+for fichier in "$repertoire"/*; do
+    if [ -f "$fichier" ]; then
+        ((compteur++))
+    fi
+done
+echo "Le dossier $repertoire contient $compteur fichier(s)."
