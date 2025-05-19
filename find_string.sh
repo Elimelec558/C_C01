@@ -1,7 +1,6 @@
 #!/bin/bash
 #Script recherchant une chaine de caractère dans un fichier.
-read fichier
-read chaine
+read fichier chaine
 if grep -q "$chaine" "$fichier"; then
     echo "La chaîne '$chaine' a été trouvée dans '$fichier'."
 else
