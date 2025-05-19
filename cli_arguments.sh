@@ -1,9 +1,8 @@
 #!/bin/bash
 # Script acceptant des arguments et les affichant
-echo "$@" 
+read -a arg
 compte=1 
-while [ "$#" -ne 0 ]; do
-    echo "Argument $compte: $1"
-    shift 
+for element in "${arg[@]}"; do
+    echo "Argument $compte: $element"
     compte=$((compte + 1))  
 done
