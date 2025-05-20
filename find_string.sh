@@ -3,8 +3,6 @@
 #!/bin/bash  
 read fichier    
 read chaine  
-if grep "$chaine" "$fichier"; then  
-    echo "Trouvé!"  
-else  
-    echo "Non trouvé."  
+if ! grep "$chaine" "$fichier"; then  
+    echo "La chaîne '$chaine' n'a pas été trouvée dans $fichier."   
 fi
