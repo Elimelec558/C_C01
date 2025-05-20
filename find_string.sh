@@ -4,7 +4,7 @@ read fichier
 read chaine
 if [ -f "$fichier" ]; then
  echo "Le fichier $fichier existe bien."
-     if grep "$chaine" "$fichier"; then
+     if grep -q "$chaine" "$fichier"; then
     echo "La chaîne $chaine a été trouvée dans $fichier."
      else
     echo "La chaîne $chaine n'a pas été trouvée dans $fichier."
