@@ -3,3 +3,4 @@
 read fichier
 read chaine
 grep "$chaine" "$fichier"
+echo "La chaine '$chaine' a été trouvée dans $fichier."
